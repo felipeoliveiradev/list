@@ -1,0 +1,29 @@
+version: '3'
+networks:
+  microservices:
+services:
+  nginx:
+    container_name: v-nginx
+    image: 'nginx:1.13'
+    restart: always
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - './nginx/conf.d:/etc/nginx/conf.d'
+    networks:
+      - microservices
+  home:
+    image: spring-boot-jpa-image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/fullstack-demo
+  # client:
+  #   image: spring-boot-jpa-image
+  #   build:
+  #     context: ./client-service
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - /data/fullstack-demo
