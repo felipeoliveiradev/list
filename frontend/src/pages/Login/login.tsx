@@ -15,6 +15,5 @@ export const Login: React.FC = () => {
     },
     history: history
   };
-  
   return <Layout {...layout(props)} />;
 };

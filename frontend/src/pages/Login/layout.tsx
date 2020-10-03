@@ -90,13 +90,7 @@ export const layout = (props: any) => {
                   ],
                   props: {
                     style: {
-                      display: "flex",
-                      flex: 1,
                       maxWidth: 300,
-                      maxHeight: 300,
-                      padding: "1rem",
-                      flexDirection: "column",
-                      justifyContent: "center"
                     },
                     onSubmit: async (e: any) => {
                       e.preventDefault();

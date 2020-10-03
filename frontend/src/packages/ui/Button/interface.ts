@@ -1,6 +1,6 @@
 export interface IButton{
-  text: string;
   props?: IProps;
+  text: string;
   type?: string;
 }
 

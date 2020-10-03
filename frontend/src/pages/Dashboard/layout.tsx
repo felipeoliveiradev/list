@@ -101,9 +101,6 @@ export const layout = () => {
                         Line({
                           child: [
                             Container({
-                              props: {
-                                className: "container"
-                              },
                               child: [
                                 Button({
                                   text: "Buscar",
