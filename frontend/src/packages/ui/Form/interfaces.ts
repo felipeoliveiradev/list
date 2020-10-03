@@ -13,4 +13,5 @@ export interface IProps {
   className?: any;
   onSubmit?: any,
   onChange?: any
+  size?: string;
 }

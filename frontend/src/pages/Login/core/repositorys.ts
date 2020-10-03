@@ -6,8 +6,8 @@ import { Tratament } from "helper/tratament/tratament";
 const calls = new LoginCalls();
 const serializers = new LoginSerializers();
 const tratament = new Tratament();
-export class LoginRepository {
 
+export class LoginRepository {
   public post = async (state: any, values: any, history: any) => {
     try {
       const serializer = await serializers.login(values);
@@ -26,7 +26,6 @@ export class LoginRepository {
     } catch (err) {
       state.errorState.setError(true)
       return tratament.responseRequest(err);
-
     }
   }
 }
